@@ -92,6 +92,9 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
+        wp_register_script('jquerySlides', get_template_directory_uri() . '/js/jquery.slides.min.js', array('jquery'), '1.0.1'); // bootstrap
+        wp_enqueue_script('jquerySlides'); // Enqueue it!
+
     	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
@@ -101,11 +104,13 @@ function html5blank_header_scripts()
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
-        wp_register_script('parallaxScript', get_template_directory_uri() . '/js/parallax.min.js', array('jquery'), '1.3.1'); // Parallax
+       
+        wp_register_script('parallaxScript', get_template_directory_uri() . '/js/lib/parallax.min.js', array('jquery'), '1.0.1'); // Parallax
         wp_enqueue_script('parallaxScript'); // Enqueue it!
 
-        wp_register_script('bootstrapScript', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.3.1'); // Parallax
-        wp_enqueue_script('bootstrapScript'); // Enqueue it!
+        
+
+        
     }
 }
 
@@ -126,6 +131,7 @@ function html5blank_styles()
 
     wp_register_style('customStyle', get_template_directory_uri() . '/style/artflection-style.css', array(), '1.0', 'all');
     wp_enqueue_style('customStyle'); // Enqueue it!
+
 
     wp_register_style('bootstrap', get_template_directory_uri() . '/style/bootstrap.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
