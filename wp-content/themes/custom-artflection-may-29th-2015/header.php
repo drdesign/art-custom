@@ -13,13 +13,13 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 			
 		<?php wp_head(); ?>
 		 <script>
-			    $(function(){
-			    	var maxWidth = 100%;
-			      $("#slides").slidesjs({
-			        width: maxWidth,
+			 $(function(){
+			    $("#slides").slidesjs({
+			        width: 1200,
 			        height: 528
 			      });
 			    });
@@ -31,9 +31,6 @@
             assets: '<?php echo get_template_directory_uri(); ?>',
             tests: {}
         });
-
-
-
         </script>
 
 	</head>

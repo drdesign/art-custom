@@ -3,15 +3,13 @@
 	<main role="main">
 		<!-- section -->
 		<section>
-    		<!-- Slides Container -->
-			  	<div id="slides">
-				    <img src="http://placehold.it/1200x500">
-				    <img src="http://placehold.it/1200x500">
-				    <img src="http://placehold.it/1200x500">
-				 </div>
-
-
-			<h1><?php the_title(); ?></h1>
+			<!-- <h1><?php the_title(); ?></h1> -->
+			<!-- Slides Container -->
+				<div id="slides">
+				  <img src="http://placehold.it/1200x500">
+				  <img src="http://placehold.it/1200x500">
+				  <img src="http://placehold.it/1200x500">
+				</div>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 

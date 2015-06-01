@@ -92,6 +92,9 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
+        // wp_register_script('jquery', get_template_directory_uri() . '/js/lib/jquery-1.11.3.min.js', array('jquery'), '1.7.1'); // Jquery
+        // wp_enqueue_script('jquery'); // Enqueue it!
+
         wp_register_script('jquerySlides', get_template_directory_uri() . '/js/jquery.slides.min.js', array('jquery'), '1.0.1'); // bootstrap
         wp_enqueue_script('jquerySlides'); // Enqueue it!
 
